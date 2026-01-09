@@ -1,0 +1,54 @@
+isolation_forest_demo/
+│
+├── 📖 文档文件
+│   ├── README.md                      # 项目总览（从这里开始！）
+│   ├── QUICKSTART.md                  # 5分钟快速上手指南
+│   ├── PROJECT_SUMMARY.md             # 项目完整总结
+│   └── real_world_application.md      # 实际业务应用详解（生产必读）
+│
+├── 💻 核心代码
+│   ├── generate_sample_data.py        # 数据生成器（生成1050条模拟数据）
+│   ├── game_login_demo.py             # 核心演示代码（训练+检测+可视化）
+│   └── config_example.py              # 生产环境配置示例
+│
+├── 📦 配置文件
+│   └── requirements.txt               # Python依赖包列表
+│
+└── 📁 数据目录
+    └── data/
+        ├── game_login_data.csv        # 生成的样本数据（运行后生成）
+        ├── detection_results.csv      # 检测结果（运行后生成）
+        └── anomaly_detection_results.png  # 可视化图表（运行后生成）
+
+---
+
+🚀 快速开始（3步）:
+
+1️⃣  安装依赖
+   pip install -r requirements.txt
+
+2️⃣  生成数据  
+   python generate_sample_data.py
+
+3️⃣  运行检测
+   python game_login_demo.py
+
+---
+
+📚 学习路径:
+
+初学者 → README.md → QUICKSTART.md → 运行demo → 理解代码
+开发者 → real_world_application.md → config_example.py → API集成
+架构师 → PROJECT_SUMMARY.md → real_world_application.md → 系统设计
+
+---
+
+💡 项目亮点:
+
+✓ 完整的端到端解决方案（数据生成→训练→检测→评估）
+✓ 详细的中文注释（每段代码都有解释）
+✓ 实战导向（可直接应用到生产环境）
+✓ 高度可扩展（支付、注册、内容等场景）
+✓ 性能优化方案（缓存、并发、批处理）
+✓ 监控告警配置（Prometheus、Grafana）
+
