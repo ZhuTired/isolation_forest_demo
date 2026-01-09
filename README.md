@@ -1,5 +1,10 @@
 # 游戏登录异常检测 - 孤立森林算法Demo
 
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.2+-orange.svg)](https://scikit-learn.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/ZhuTired/isolation_forest_demo?style=social)](https://github.com/ZhuTired/isolation_forest_demo)
+
 ## 项目简介
 
 本项目演示如何使用**孤立森林(Isolation Forest)**算法检测游戏登录场景中的异常流量，帮助识别潜在的账号盗刷、机器人攻击、刷量等风控问题。
