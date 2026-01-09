@@ -29,13 +29,15 @@ def generate_normal_logins(n_samples=1000):
 
     for i in range(n_samples):
         # 正常登录时间：主要在白天和晚上
-        login_hour = np.random.choice(
-            range(24),
-            p=[0.01, 0.01, 0.01, 0.01, 0.01, 0.02,  # 0-5点 (低概率)
-               0.03, 0.05, 0.06, 0.07, 0.08, 0.08,  # 6-11点 (逐渐增加)
-               0.07, 0.06, 0.05, 0.05, 0.05, 0.06,  # 12-17点 (平稳)
-               0.08, 0.10, 0.09, 0.08, 0.05, 0.02]  # 18-23点 (高峰后下降)
-        )
+        probabilities = [0.01, 0.01, 0.01, 0.01, 0.01, 0.02,  # 0-5点 (低概率)
+                        0.03, 0.05, 0.06, 0.07, 0.08, 0.08,  # 6-11点 (逐渐增加)
+                        0.07, 0.06, 0.05, 0.05, 0.05, 0.06,  # 12-17点 (平稳)
+                        0.08, 0.10, 0.09, 0.08, 0.05, 0.02]  # 18-23点 (高峰后下降)
+        # 归一化确保概率和为1
+        probabilities = np.array(probabilities)
+        probabilities = probabilities / probabilities.sum()
+
+        login_hour = np.random.choice(range(24), p=probabilities)
 
         # 正常登录频率：每小时1-3次
         login_frequency = np.random.randint(1, 4)
